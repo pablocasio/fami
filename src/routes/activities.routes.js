@@ -1,22 +1,22 @@
 import { Router } from "express";
-import { authRequired } from "../middlewares/validateToken";
+import { authRequired } from "../middlewares/validateToken.js";
 import {
   getActivities,
   createActivities,
   getActivitie,
   updateActivities,
   deleteActivities,
-} from "../controllers/activite.controller";
+} from "../controllers/activite.controller.js";
 const router = Router();
 
-router.get("/activites", authRequired, getActivities);
+router.get("/activities", authRequired, getActivities);
 
-router.get("/activites/:id", authRequired, getActivitie);
+router.get("/activities/:id", authRequired, getActivitie);
 
-router.post("/activites", authRequired, createActivities);
+router.post("/activities", authRequired, createActivities);
 
-router.put("/activites/:id", authRequired, updateActivities);
+router.put("/activities/:id", authRequired, updateActivities);
 
-router.delete("/activites/:id", authRequired, deleteActivities);
+router.delete("/activities/:id", authRequired, deleteActivities);
 
 export default router;
