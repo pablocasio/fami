@@ -4,8 +4,8 @@ import { LoginPage } from "./pages/LoginPage.jsx";
 import React from "react";
 import { AuthProvider } from "./context/AuthContext.jsx"; // ✅ Import correcto
 import ProtectedRoute from "./ProtectedRoute.jsx";
-import Actividades from "./pages/actividades.jsx";
-import Profile from "./pages/Profile.jsx";
+import Actividades from "./pages/ActividadesPage.jsx";
+import ProfilePage from "./pages/ProfilePage.jsx";
 function App() {
   return (
     <AuthProvider>
@@ -15,7 +15,7 @@ function App() {
           <Route path="/registro" element={<RegisterPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route element={<ProtectedRoute />}>
-            <Route path="/perfil/:id" element={<Profile />} />
+            <Route path="/perfil/:id" element={<ProfilePage />} />
             <Route path="/calendario" element={<h1>calendario</h1>} />
             <Route path="/actividades" element={<Actividades />} />
           </Route>
