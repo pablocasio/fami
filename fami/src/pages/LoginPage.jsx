@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import { useAuth } from "../context/AuthContext";
 import React from "react";
+import { useNavigate } from "react-router-dom"; // 👈 Importar
 
 export const LoginPage = () => {
   const {
@@ -9,12 +10,17 @@ export const LoginPage = () => {
     formState: { errors },
   } = useForm();
 
-  // Siempre damos un valor por defecto: []
   const { loginn, errors: SigninErrors = [] } = useAuth();
+  const navigate = useNavigate(); // 👈 Inicializar
 
-  const onSubmit = (data) => {
-    console.log("Datos del formulario:", data);
-    loginn(data);
+  const onSubmit = async (data) => {
+    try {
+      console.log("Datos del formulario:", data);
+      await loginn(data); // Llamada al backend
+      navigate("/actividades"); // 👈 Redirige tras login correcto
+    } catch (error) {
+      console.error("Error en login:", error);
+    }
   };
 
   return (

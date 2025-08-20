@@ -6,7 +6,7 @@ function ProtectedRoute() {
   console.log("loading en ProtectedRoute:", loading);
   console.log("isAuthenticated en ProtectedRoute:", isAuthenticated);
   if (loading) {
-    return <div>Loading...</div>;
+    return <div>y tu token???no iniciaste session vuelve crj</div>;
   }
   if (!loading && !isAuthenticated) {
     return <Navigate to="/login" replace />;
