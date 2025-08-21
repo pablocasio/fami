@@ -4,7 +4,7 @@ import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 
 export default function CumpleanosCalendar() {
-  // Lista de cumpleaños
+  // Lista de cumpleaños reales
   const cumpleanos = [
     {
       title: "🎉 Pablo (2005)",
@@ -12,23 +12,23 @@ export default function CumpleanosCalendar() {
       foto: "https://i.pravatar.cc/150?img=1",
     },
     {
-      title: "🎂 Maria",
-      date: "2025-03-15",
+      title: "🎂 Keyla",
+      date: "2025-03-02",
       foto: "https://i.pravatar.cc/150?img=2",
     },
     {
-      title: "🎁 Juan",
-      date: "2025-05-02",
+      title: "🎁 Ely",
+      date: "2025-09-10",
       foto: "https://i.pravatar.cc/150?img=3",
     },
     {
-      title: "🎊 Sofia",
-      date: "2025-09-18",
+      title: "🎊 Shami",
+      date: "2025-09-23",
       foto: "https://i.pravatar.cc/150?img=4",
     },
     {
-      title: "🎂 Carlos",
-      date: "2025-12-10",
+      title: "👶 Hija de Ely",
+      date: "2025-05-26",
       foto: "https://i.pravatar.cc/150?img=5",
     },
   ];

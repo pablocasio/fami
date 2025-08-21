@@ -6,6 +6,7 @@ import { AuthProvider } from "./context/AuthContext.jsx"; // ✅ Import correcto
 import ProtectedRoute from "./ProtectedRoute.jsx";
 import Actividades from "./pages/ActividadesPage.jsx";
 import ProfilePage from "./pages/ProfilePage.jsx";
+import HomePage from "./pages/HomePage.jsx";
 function App() {
   return (
     <AuthProvider>
@@ -18,6 +19,7 @@ function App() {
             <Route path="/perfil/:id" element={<ProfilePage />} />
             <Route path="/calendario" element={<h1>calendario</h1>} />
             <Route path="/actividades" element={<Actividades />} />
+            <Route path="/arbol-genealogico" element={<HomePage />} />
           </Route>
           <Route path="/admin" element={<h1>admin</h1>} />
           <Route path="*" element={<h1>no existe esta ruta</h1>} />
