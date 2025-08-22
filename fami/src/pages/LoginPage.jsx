@@ -2,7 +2,6 @@ import { useForm } from "react-hook-form";
 import { useAuth } from "../context/AuthContext";
 import React from "react";
 import { useNavigate } from "react-router-dom"; // 👈 Importar
-
 export const LoginPage = () => {
   const {
     register,
@@ -17,7 +16,7 @@ export const LoginPage = () => {
     try {
       console.log("Datos del formulario:", data);
       await loginn(data); // Llamada al backend
-      navigate("/actividades"); // 👈 Redirige tras login correcto
+      navigate("/arbol-genealogico"); // 👈 Redirige tras login correcto
     } catch (error) {
       console.error("Error en login:", error);
     }

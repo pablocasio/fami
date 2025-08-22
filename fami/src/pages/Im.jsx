@@ -1,12 +1,12 @@
 import React from "react";
 import Navbar from "../components/Navbar.jsx";
-function ActividadesPage() {
+function Im() {
   return (
     <div>
       <Navbar />
-      <h1>Actividades</h1>
+      <h1>Im</h1>
     </div>
   );
 }
 
-export default ActividadesPage;
+export default Im;
