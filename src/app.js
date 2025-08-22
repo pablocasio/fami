@@ -7,10 +7,11 @@ import cors from "cors";
 const app = express();
 app.use(
   cors({
-    origin: "http://localhost:5173",
-    credentials: true, // 👈 Esto es lo que permite enviar cookies/sesiones
+    origin: process.env.FRONTEND_URL, // usa la variable del .env
+    credentials: true,
   })
 );
+
 app.use(express.json());
 app.use(cookieParser());
 app.use(morgan("dev"));

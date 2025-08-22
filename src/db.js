@@ -2,9 +2,13 @@ import mongoose from "mongoose";
 
 export const connectDB = async () => {
   try {
-    mongoose.connect("mongodb://localhost/family");
-    console.log("db connected");
+    const mongoURI = process.env.MONGO_URI || "mongodb://localhost/family";
+    await mongoose.connect(mongoURI, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+    console.log("DB connected");
   } catch (error) {
-    console.log(error);
+    console.error("DB connection error:", error);
   }
 };
